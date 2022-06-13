@@ -11,7 +11,7 @@ class Candidate extends Model
     protected $fillable = ['name', 'age', 'votes'];
     public function limitCandidate() {
         $candidate = Candidate::all()->count();
-        if($candidate > 3){
+        if($candidate >= 3){
             return true;
         }
     }
